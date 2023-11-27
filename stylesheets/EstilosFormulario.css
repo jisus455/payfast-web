@@ -1,0 +1,493 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(https://cdn.photoroom.com/v1/assets-cached.jpg?path=backgrounds_v3/black/Photoroom_black_background_extremely_fine_texture_only_black_co_bc8c725e-7ec8-4d6b-b024-98be7544d757.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*contenedor*/
+.container{
+    width: 380px;
+    height: 500px;
+    background-color: white;
+    border-radius: 7px;
+    text-align: center;
+    padding: 35px 35px 0px 35px;
+    opacity: 0.95;
+}
+
+
+.container header{
+    font-size: 28px;
+    font-weight: 600px;
+    margin: 0px 0px 40px 0px;
+}
+
+/*formulario*/
+.container .form-princ{
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-princ form{
+    display: flex;
+    width: 300%;
+}
+
+.form-princ form .pagina{
+    width: 39.5%;
+    transition: margin-left 0.5s ease-in-out;
+    padding-left: 10px;
+}
+
+.form-princ form .pagina .titulo{
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500px;
+    margin-bottom: 70px;
+}
+
+.form-princ form .pagina .campo{
+    height: 35px;
+    width: 350px;
+    margin: 40px 0px;
+    display: flex;
+    position: relative;
+}
+
+/*editando componentes del form*/
+.form-princ form .pagina .campo .label{
+    position: absolute;
+    top: -25px;
+    font-family: 'Karla', sans-serif;
+    color: black;
+    font-size: 14px;
+    float: left;
+    text-align: left;
+    width:100%;
+}
+
+.form-princ form .pagina .campo input{
+    width: 100%;
+    height: 100%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+.form-princ form .pagina .campo select{
+    width: 100%;
+    padding-left: 10px;
+    font-weight: 500px;
+    font-size: 17px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+/*botones*/
+.btns{
+    padding-top: 15px;
+}
+.button1 {
+    width: 300px;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #3faff4;;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #bfc1c2;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25px;
+}
+
+.button1:hover {
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+    outline: 2px solid #3faff4;;
+    box-shadow: 4px 5px 17px -4px #3faff4;;
+}
+
+.button1::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #3faff4;;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+}
+
+.button1:hover::before {
+    width: 250%;
+}
+
+/*BOTON DE ATRAS 1*/
+.buttonAtras1 {
+    width: 160px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #3faff4;;
+    transition: all 1000ms;
+    font-size: 10px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #bfc1c2;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+.buttonAtras1:hover {
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+    outline: 2px solid #3faff4;;
+    box-shadow: 4px 5px 17px -4px #3faff4;;
+}
+
+.buttonAtras1::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #3faff4;;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+}
+
+.buttonAtras1:hover::before {
+    width: 250%;
+}
+
+
+/*BOTON DE SIGUIENTE 1*/
+.buttonAdelante1 {
+    width: 170px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #3faff4;;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #bfc1c2;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttonAdelante1:hover {
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+    outline: 2px solid #3faff4;;
+    box-shadow: 4px 5px 17px -4px #3faff4;;
+}
+
+.buttonAdelante1::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #3faff4;;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+}
+
+.buttonAdelante1:hover::before {
+    width: 250%;
+}
+
+
+/*BOTON ATRAS 2*/
+.buttonAtras2 {
+    width: 160px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #3faff4;;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #bfc1c2;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonAtras2:hover {
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+    outline: 2px solid #3faff4;;
+    box-shadow: 4px 5px 17px -4px #3faff4;;
+}
+
+.buttonAtras2::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #3faff4;;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+}
+
+.buttonAtras2:hover::before {
+    width: 250%;
+}
+
+
+
+/*BOTON ENVIAR*/
+.enviar {
+    width: 170px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #3faff4;;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #bfc1c2;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.enviar:hover {
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+    outline: 2px solid #3faff4;;
+    box-shadow: 4px 5px 17px -4px #3faff4;;
+}
+
+.enviar::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #3faff4;;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+}
+
+.enviar:hover::before {
+    width: 250%;
+}
+
+
+
+/*botones de pag 2 y 3*/
+.form-princ form .pagina .btns button{
+    margin-top: -20px !important;
+}
+
+/*boton volver y siguiente*/
+form .pagina .btns button.volver{
+    margin-right: 3px;
+    font-size: 17px;
+}
+
+form .pagina .btns button.adelante{
+    margin-left: 17px;
+}
+
+/*Barra de progreso*/
+.container .progress-bar{
+    display: flex;
+    margin: 40px 0px;
+
+}
+
+.container .progress-bar .paso{
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.progress-bar .paso p{
+    font-size: 18px;
+    font-weight: 500px;
+    color: black;
+    margin-bottom: 9px;
+}
+
+.progress-bar .paso p.active{
+    color: rgb(16, 167, 227);
+}
+
+.progress-bar .paso .num{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: inline-block;
+    font-weight: 500px;
+    font-size: 17px;
+    line-height: 25px;
+    transition: 0.2s;
+}
+
+.progress-bar .paso .num.num.active{
+    border-color:  rgb(16, 167, 227);
+    background:  linear-gradient(rgb(16, 167, 227),rgb(137, 210, 239));
+}
+
+.progress-bar .paso .num span{
+    font-weight: 500px;
+    font-size: 17px;
+    line-height: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.progress-bar .paso .num.active span{
+    display: none;
+}
+
+.progress-bar .paso .check{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 15px;
+    transform: translate(-50%,-50%);
+}
+
+.progress-bar .paso .check.active{
+    display: block;
+    color: black;
+}
+
+.progress-bar .paso .num::before,
+.progress-bar .paso .num::after{
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 2px;
+    bottom: 11px;
+    right: -70px;
+    background: black;
+}
+
+.progress-bar .paso:last-child .num::before,
+.progress-bar .paso:last-child .num::after{
+    display: none;
+}
+
+/*animacion de progress bar*/
+.progress-bar .paso .num.active:after{
+    background-color:rgb(16, 167, 227);
+    animation: mov_Linea 0.3s linear forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes mov_Linea{
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+
+/*Error de espacio vacío*/
+
+.error{
+    color: red;
+    float: right;
+    text-align: right;
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-contenido {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+}
+
+.modal-contenido h3 {
+    margin-top: 0;
+}
+
+.modal-botones {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.modal-botones button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal-botones button:focus {
+    outline: none;
+}

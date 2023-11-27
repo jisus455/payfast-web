@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../stylesheets/EstilosFormulario.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://kit.fontawesome.com/e0f34b8123.js" crossorigin="anonymous"></script>
+  <title>Formulario-tc</title>
+</head>
+
+<body>
+  <script>
+    if (localStorage.getItem("nombre")) {
+      alert('Ya tiene una cuenta asociada a este dispositivo')
+      window.location.href = "../Paginas/iniciar-seccion.html";
+    }
+  </script>
+  <div class="container">
+    <header>Registro de Datos</header>
+    <!--barra de progreso-->
+    <div class="progress-bar">
+      <div class="paso">
+        <p>nac.</p>
+        <div class="num">
+          <span>1</span>
+        </div>
+        <div class="check fas fa-check"></div>
+      </div>
+      <div class="paso">
+        <p>Contacto</p>
+        <div class="num">
+          <span>2</span>
+        </div>
+        <div class="check fas fa-check"></div>
+      </div>
+      <div class="paso">
+        <p>datos</p>
+        <div class="num">
+          <span>3</span>
+        </div>
+        <div class="check fas fa-check"></div>
+      </div>
+    </div>
+
+    <div class="form-princ">
+      <form action="#">
+
+        <!--PAGINA NUMERO 1-->
+        <div class="pagina movPag">
+          <div class="titulo">Información general</div>
+          <!--CAMPO 1-->
+          <div class="campo">
+            <div class="label">Nombres: <b class="error" id="nombres-error"></b></div>
+            <input type="text" id="nombres" placeholder="Nombres">
+          </div>
+          <!--CAMPO 2-->
+          <div class="campo">
+            <div class="label">Apellidos: <b class="error" id="apellido-error"></b></div>
+            <input type="text" id="apellido" placeholder="Apellidos">
+          </div>
+          <!--CAMPO 3 BOTON-->
+          <div class="campo sigPag">
+            <button class="button1">
+              siguiente
+            </button>
+          </div>
+        </div>
+
+        <!--PAGINA NUMERO 2-->
+        <div class="pagina">
+          <div class="titulo">Información Secundaria</div>
+          <!--CAMPO 1-->
+          <div class="campo">
+            <div class="label">Fecha de Nacimiento: <b class="error" id="fechaNac-error"></b></div>
+            <input type="date" id="fechaNac" max="2010-12-31" value="2010-02-03">
+          </div>
+          <!--CAMPO 2-->
+          <div class="campo">
+            <div class="label">Género: <b class="error" id="sexo-error"></b></div>
+            <select id="sexo">
+              <option value="-1" disabled selected>Elige una opción.
+              <option>
+              <option value="0">Masculino
+              <option>
+              <option value="1">Femenino
+              <option>
+            </select>
+          </div>
+          <!--CAMPO 3 BOTON / atras,siguiente-->
+          <div class="campo btns">
+            <button class="volver-pag1 volver buttonAtras1">Atrás</button>
+            <button class="adelante-pag3 adelante buttonAdelante1">Siguiente</button>
+          </div>
+        </div>
+
+        <!--PAGINA NUMERO 3-->
+        <div class="pagina">
+          <div class="titulo">Información Contácto</div>
+          <!--CAMPO 1-->
+          <div class="campo">
+            <div class="label">Correo Electrónico: <b class="error" id="correo-error"></b></div>
+            <input type="text" id="correo" placeholder="Correo Electrónico">
+          </div>
+          <!--CAMPO 2-->
+          <div class="campo">
+            <div class="label">Número Telefónico: <b class="error" id="numCel-error"></b></div>
+            <input type="text" id="numCel" placeholder="Número Telefónico">
+          </div>
+          <!--CAMPO 3 BOTON / atras,siguiente-->
+          <div class="campo btns">
+            <button class="volver-pag2 buttonAtras2 ">Atrás</button>
+            <button class="fin adelante enviar" data-bs-toggle="modal">Enviar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="modal-confirmacion" class="modal">
+    <div class="modal-contenido">
+      <h3>¿Está seguro de que los datos son correctos?</h3>
+      <p>Por favor, revise la información antes de enviarla.</p>
+      <div class="modal-botones">
+        <button id="modal-btn-si ">Sí</button>
+        <button id="modal-btn-no ">No</button>
+      </div>
+    </div>
+  </div>
+  <script src="./javascript/Movimiento.js"></script>
+
+</body>
+
+</html>
+
+
+
+<script defer>
+
+  document.querySelector('.fin').addEventListener('click', function (event) {
+    event.preventDefault();
+    const nombre = localStorage.getItem('nombre')
+    const apellido = localStorage.getItem('apellido')
+    const sexo = localStorage.getItem('sexo') === 1 ? "Masculino" : "Femenino"
+    const fNact = localStorage.getItem('fechaNac')
+    Swal.fire({
+      title: '¿Está seguro de que los datos son correctos?',
+      text: `Nombre:${nombre}
+        Apellido:${apellido}
+        Sexo:${sexo}
+        Fecha de nacimiento:${fNact}`,
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'Sí',
+      cancelButtonText: 'No'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = "../Paginas/iniciar-seccion.html";
+      }
+    });
+  });
+
+
+
+
+</script>

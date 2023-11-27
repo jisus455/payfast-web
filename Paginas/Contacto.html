@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <link href="../stylesheets/navbar.css" rel="stylesheet">
+  <link href="/stylesheets/Background.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <script src="//code.tidio.co/rmrbclyzdim7codhspawc2ibbikkh6cm.js" async></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+  <link rel="stylesheet" href="../stylesheets/Contacto.css">
+  <!-- Fontawesome icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Contacto</title>
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+
+  <section class="contact-section">
+    <div class="contact-bg">
+      <h3></h3>
+      <h2>Contacto</h2>
+      <div class="line">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <p class="text" style="color: white;">Si tenes dudas, estamos para ayudarte en lo que necesites</p>
+    </div>
+
+
+    <div class="contact-body">
+      <div class="contact-info">
+        <div>
+          <span><i class="fas fa-solid fa-user"></i></span>
+          <span style="color: black; font-weight: bold;">Atenciòn al cliente</span>
+          <span class="text">0810-888-3278 (FAST)</span>
+        </div>
+        <div>
+          <span><i class="fas fa-envelope-open"></i></span>
+          <span style="color: black; font-weight: bold;">E-mail</span>
+          <span class="text">consultas@payfast.com</span>
+        </div>
+        <div>
+          <span><i class="fas fa-map-marker-alt"></i></span>
+          <span style="color: black; font-weight: bold;">Oficinas Comerciales</span>
+          <span class="text">Av. Corrientes 3200, Buenos Aires, Argentina</span>
+        </div>
+        <div>
+          <span><i class="fas fa-clock"></i></span>
+          <span style="color: black; font-weight: bold;">Horario de atenciòn</span>
+          <span class="text">Lunes - Viernes (9:00 AM to 5:00 PM)</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="contenedor">
+      <div class="contenedor-imagen">
+        <img src="../img/contact-png.png" alt="contact" class="image">
+      </div>
+      <div class="contenedor-formulario">
+        <form action="" class="formulario" id="formulario" style="padding-bottom: 100px; padding-left: 50px;">
+          <!-- Grupo: Nombre -->
+          <div class="formulario__grupo" id="grupo__nombre">
+            <label for="nombre" class="formulario__label">Nombre</label>
+            <div class="formulario__grupo-input">
+              <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El nombre solo puede contener letras</p>
+          </div>
+
+          <!-- Grupo: Apellido -->
+          <div class="formulario__grupo" id="grupo__apellido">
+            <label for="apellido" class="formulario__label">Apellido</label>
+            <div class="formulario__grupo-input">
+              <input type="text" class="formulario__input" name="apellido" id="apellido" placeholder="Garcia">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El apellido solo puede contener letras</p>
+          </div>
+
+          <!-- Grupo: Correo Electronico -->
+          <div class="formulario__grupo" id="grupo__correo">
+            <label for="correo" class="formulario__label">Correo Electrónico</label>
+            <div class="formulario__grupo-input">
+              <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion
+              bajo.</p>
+          </div>
+
+          <!-- Grupo: Teléfono -->
+          <div class="formulario__grupo" id="grupo__telefono">
+            <label for="telefono" class="formulario__label">Teléfono</label>
+            <div class="formulario__grupo-input">
+              <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El telefono debe puede contener numeros y el maximo son 14 dígitos.</p>
+          </div>
+
+          <!-- Grupo: Mensajes -->
+          <div class="formulario__grupo" id="grupo__mensajes" style="height: 100px;">
+            <label for="mensajes" class="formulario__label">Mensaje</label>
+            <div class="formulario__grupo-input">
+              <input type="text" class="formulario__input" name="mensajes" id="mensajes"
+                placeholder="Ingrese su mensaje">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El mensaje debe contener menos de 300 digitos</p>
+          </div>
+
+          <div class="formulario__mensaje" id="formulario__mensaje" style="padding-top: 5px; padding-bottom: 5px;">
+            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente.
+            </p>
+          </div>
+          <div class="formulario__grupo formulario__grupo-btn-enviar">
+            <button type="submit" class="formulario__btn">Enviar</button>
+            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+          </div>
+
+
+        </form>
+      </div>
+    </div>
+
+
+
+
+    <div id="footer"></div>
+    <script src="../Componentes/javascript/cargarNavFoo.js"></script>
+
+    <script src="../Paginas/javascript/formulario.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

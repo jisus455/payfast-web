@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="../stylesheets/navbar.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="/stylesheets/Background.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/Paginas/javascript/Api.js" defer></script>
+  <title>Nuestra empresa</title>
+</head>
+
+<body class="d-flex flex-column">
+  <div id="navbar"></div>
+  <div class="contenedorDePagPrincipal">
+    <div
+      class="presentacion d-flex justify-content-center align-items-center flex-column container my-5 text-center cardDeInicio">
+      <div class="api_contenido align-self-lg-baseline">
+        <div class="card dolar">
+          <div class="content">
+            <div class="back">
+              <div class="back-content">
+                <p class="circuloDolar">1 dolar es equivalente a :</p>
+                <p id="euros" class="circuloDolar"></p>
+              </div>
+            </div>
+            <div class="front">
+
+              <div class="img">
+                <div class="circle">
+                </div>
+                <div class="circle" id="right">
+                </div>
+                <div class="circle" id="bottom">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="display-5 titulo">PayFast</h1>
+      <img src="/img/logo_low.png">
+      <h2 class="datos">Tienda online-Tarjeta de credito-Diseño web</h2>
+      <p>PayFast fue creada en el año 2023 con el objetivo de hacer sencillo el acceso a una tarjeta llena de
+        beneficios.Con nuestra tarjeta usted puede olvidarse de: </p>
+    </div>
+  </div>
+
+  <div class="container-card">
+    <div class="cardDeBeneficios">
+      <figure>
+        <img
+          src="https://www.eluniverso.com/resizer/_0mHWN-ndOHLzkeDMGm6BeuBArQ=/893x670/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/FQ6NM4MNUFFXZMT4KB3BFT5Q5U.jpg"
+          alt="tramites img">
+        <div class="contenido">
+          <p class="textoCard">Tramites presenciales</p>
+        </div>
+      </figure>
+    </div>
+    <div class="cardDeBeneficios">
+      <figure>
+        <img
+          src="https://files.alerta.rcnradio.com/alerta_tolima_prod/public/styles/article_desktop/public/2020-03/filasbancos_1_0.jpg?itok=wEdxaT8y"
+          alt="imagenes filas">
+        <div class="contenido">
+          <p class="textoCard">Filas largas</p>
+        </div>
+      </figure>
+    </div>
+    <div class="cardDeBeneficios">
+      <figure>
+        <img src="https://image.freepik.com/foto-gratis/vista-cosechada-persona-que-llena-formulario-solicitud_1262-2272.jpg" alt="formularios">
+        <div class="contenido">
+          <p class="textoCard">Relleno de formularios</p>
+        </div>
+      </figure>
+    </div>
+    <div class="cardDeBeneficios">
+      <figure>
+        <img
+          src="https://fincompara.mx/wp-content/uploads/2020/03/amortizacion_deuda_899x493.png"
+          alt="pagos mensuales imagen">
+        <div class="contenido">
+          <p class="textoCard">Pagos mensuales</p>
+        </div>
+      </figure>
+    </div>
+
+  </div>
+  <h3 class="mt-3  linkDePagPrincipal">No espere mas y <a
+      class=" link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+      href="/Paginas/CrearTarjeta.html">cree su tarjeta.</a></h3>
+
+  <div id="footer"></div>
+  <script src="/Componentes/javascript/cargarNavFoo.js"></script>
+</body>
+
+</html>

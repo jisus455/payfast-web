@@ -1,0 +1,250 @@
+body{
+    background: url(https://images.unsplash.com/photo-1588421357574-87938a86fa28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80);
+    background: linear-gradient(rgb(241, 239, 239),rgb(255, 254, 254));
+    background-size: cover;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*card de euros*/
+.card {
+    overflow: visible;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 1px solid black ;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 300ms;
+}
+
+
+.front, .back {
+    background-color: #151515;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.back {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.back::before {
+    position: absolute;
+    content: ' ';
+    display: block;
+    width: 160px;
+    height: 160%;
+    background: linear-gradient(90deg, transparent, #9966ff, #66bfff, #66a8ff, #66d1ff, transparent);
+    animation: rotation_481 5000ms infinite linear;
+}
+
+.back-content {
+    position: absolute;
+    width: 97%;
+    height: 99%;
+    background-color: #151515;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+@keyframes rotation_481 {
+    0% {
+    transform: rotateZ(0deg);
+}
+
+0% {
+    transform: rotateZ(360deg);
+    }
+}
+
+.front {
+    transform: rotateY(180deg);
+    color: white;
+}
+
+@keyframes floating {
+    0% {
+    transform: translateY(0px);
+}
+
+50% {
+    transform: translateY(10px);
+}
+
+100% {
+    transform: translateY(0px);
+    }
+}
+
+.back-content p{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 8px !important;
+    width: 60px !important;
+    padding-top: 5px;
+    height: 1px !important;
+}
+
+
+/*pagprincipal*/
+
+.contenedorDePagPrincipal{
+    background-color: #4e588b;
+    background: url("https://milpaginasweb.com.ar/wp-content/uploads/2022/02/business-coffee-computer-374006.jpg");
+    background-size: cover;
+    background-position: center left;
+    background-repeat: no-repeat;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo{
+    color: whitesmoke;
+    text-shadow: 1px 3px black;
+    font-weight: bold;
+    padding-top: 1.5em;
+}
+
+.contenedorDePagPrincipal img{
+    margin-bottom: 20px;
+}
+
+.contenedorDePagPrincipal  p{
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+    text-shadow: 1px 1px black;
+    font-size: 1em;
+    width: 50%;
+    height: 30px;
+}
+
+.datos{
+    color: whitesmoke;
+    font-size: 60px;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px black;
+}
+
+/*lista*/
+.container-card{
+	width: 100%;
+	display: flex;
+    justify-content: center;
+	max-width: 1100px;
+    gap: 5%;
+    margin-top: 80px;
+    font-size: 17px;
+    margin: 0 auto;
+}
+
+.cardDeBeneficios{
+	width: 20%;
+	margin-top: 20px;
+	border-radius: 6px;
+	overflow: hidden;
+	background:#fff;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+	transition: all 400ms ease-out;
+	cursor: default;
+}
+.cardDeBeneficios:hover{
+	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+	transform: translateY(-3%);
+}
+.cardDeBeneficios img{
+	width: 100%;
+	height: 220px;
+    background-size: cover;
+}
+
+.contenido{
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+/*link*/
+.linkDePagPrincipal{
+    margin-top: 100px !important;
+    margin-left: 41.4%;
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+.linkDePagPrincipal a{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #363D55;
+    font-weight: bold;
+}
+
+.linkDePagPrincipal a:hover{
+    color: #4e588b;
+}
+
+
+/*responsive pag principal*/
+
+@media (max-width: 800px) {
+   
+
+    .container-card{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 11px;
+        margin: 0 auto;
+        margin-top: 80px;
+    }
+    .cardDeBeneficios{
+        width: 50%;
+        height: 50%;
+        margin: 8px;
+    }
+    .cardDeBeneficios img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .linkDePagPrincipal{
+        margin-top: 100px !important;
+        margin-left: 45%;
+        font-size: 10px;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+
+
+    .datos{
+        font-size: 2em;
+    }
+}
+
